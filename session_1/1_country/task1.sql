@@ -22,4 +22,3 @@ SELECT Country FROM countries WHERE CoastlineRatio=0;
 SELECT Country FROM countries WHERE Country LIKE 'A%';
 SELECT Country FROM countries WHERE Country LIKE 'United%';
 SELECT Country FROM countries WHERE Birthrate>Deathrate AND Population>50000000;
-
