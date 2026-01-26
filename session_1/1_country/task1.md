@@ -1,5 +1,5 @@
 # Task 1
-
+#
 ## Exercises
 1. Retrieve all data from the countries table.
 2. Select only the Country and Population columns.
