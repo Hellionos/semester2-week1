@@ -15,12 +15,11 @@
 SELECT COUNT(Country) FROM countries;
 SELECT COUNT(Country) FROM countries GROUP BY Continent;
 SELECT SUM(Population) FROM countries GROUP BY Continent;
+SELECT AVG(GDPPerCapita) FROM countries GROUP BY Continent;
+SELECT Continent FROM countries GROUP BY Continent HAVING COUNT(*)>5;
+SELECT Continent FROM countries GROUP BY Continent HAVING SUM(Population)>1000000000;
+SELECT Country FROM countries GROUP BY Continent HAVING MAX(Population);
+SELECT Continent, AVG(PopDensityPerSqMi), MAX(Population), MIN(GDPPerCapita) FROM countries GROUP BY Continent;
+SELECT Continent, AVG(PopDensityPerSqMi), SUM(GDPPerCapita) FROM countries GROUP BY Continent HAVING AVG(PopDensityPerSqMi)>100 AND  SUM(GDPPerCapita)>5000;
+SELECT Continent, SUM(AreaSqMi), SUM(ArablePercent), AVG(Birthrate) FROM countries WHERE Population>10000000 GROUP BY Continent;
 
-
---4. Find the average GDP per capita for each continent.
---5. Find continents that have more than 5 countries.
---6. Find continents where the total population is greater than 1 billion.
---7. Find the country with the highest population in each continent.
---8. For each continent, find the average population density, the highest population, and the lowest GDP per capita.
---9. Find continents where the average population density is greater than 100 and the total GDP per capita is greater than 5000.
---10. For each continent, calculate the total area, the total arable percentage, and the average birthrate for countries with a population greater than 10 million.
