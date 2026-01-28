@@ -9,21 +9,37 @@
 
 
 -- write your sql code here
---Easy Tasks
+--Easy Tasks - Done
 
-SELECT * from books;
-
+--SELECT * from books;
+--SELECT title, author FROM books;
+--SELECT * FROM books WHERE published_year>2015;
+--SELECT * FROM books WHERE pages>400;
+--SELECT * FROM books WHERE rating>=4.0;
+--SELECT * FROM books WHERE genre='Fantasy';
+--SELECT * FROM books WHERE published_year<2000;
+--SELECT * FROM books WHERE pages<300;
 
 --1. Show all columns for all books.
 --2. Show the title and author of every book.
---3. Show all books published after 2015.
+--3. Show all books published after 2015. (There aren't any in the database)
 --4. Show all books with more than 400 pages.
 --5. Show all books with a rating of 4.0 or higher.
 --6. Show all books in the `Fantasy` genre.
 --7. Show all books published before the year 2000.
 --8. Show all books with fewer than 300 pages.
 
---Medium Tasks
+--Medium Tasks - Done
+
+--SELECT * FROM books WHERE genre='Science Fiction' AND rating>4.0;
+--SELECT * FROM books WHERE published_year<2000 AND pages<300;
+--SELECT * FROM books WHERE genre='Fantasy' OR genre='Romance';
+--SELECT * FROM books WHERE rating<3.5 OR pages>700;
+--SELECT * FROM books WHERE title LIKE 'The %';
+--SELECT * FROM books WHERE author LIKE '%a%';
+--SELECT * FROM books ORDER BY published_year ASC;
+--SELECT * FROM books ORDER BY rating DESC;
+--SELECT * FROM books WHERE genre='Mystery' ORDER BY title;
 
 --9. Show books that are in the `Science Fiction` genre **and** have a rating higher than 4.0.
 --10. Show books published before 2000 **and** with fewer than 300 pages.
@@ -35,7 +51,16 @@ SELECT * from books;
 --16. Show all books ordered by rating from highest to lowest.
 --17. Show all mystery books ordered alphabetically by title.
 
--- Hard Tasks
+-- Hard Tasks - DONE
+
+--SELECT * FROM books ORDER BY rating DESC LIMIT 5;
+--SELECT * FROM books ORDER BY published_year DESC LIMIT 3;
+--SELECT * FROM books ORDER BY pages ASC LIMIT 10;
+--SELECT * FROM books WHERE published_year>2010 ORDER BY rating DESC LIMIT 5;
+--SELECT * FROM books WHERE pages>500 AND genre='Fantasy' ORDER BY rating DESC;
+--SELECT * FROM books WHERE published_year<1980 AND pages>300 ORDER BY published_year;
+--SELECT * FROM books WHERE genre='Mystery' ORDER BY rating ASC LIMIT 5;
+--SELECT * FROM books WHERE genre='Science Fiction' AND published_year>2000 ORDER BY published_year LIMIT 5;
 
 --18. Show the top 5 highest-rated books.
 --19. Show the 3 most recently published books.
