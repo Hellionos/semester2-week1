@@ -4,3 +4,5 @@
 
 --Ethan West
 --201990893
+
+SELECT StudentId, FirstName, LastName, DateOfBirth FROM Student ORDER BY DateOfBirth DESC LIMIT 5;
