@@ -7,4 +7,4 @@
  
 SELECT Student.StudentId AS StudentId, FirstName, LastName, (SUM(CASE WHEN Enrolment.Grade >= 40 THEN Course.Credits ELSE 0 END)) AS TotalCreditsPassed 
 FROM Student JOIN Enrolment  ON Student.StudentId=Enrolment.StudentId 
-JOIN Course ON Enrolment.CourseId=Course.CourseId WHERE Enrolment.Grade>=40 GROUP BY Student.StudentId;
+JOIN Course ON Enrolment.CourseId=Course.CourseId GROUP BY Student.StudentId;
