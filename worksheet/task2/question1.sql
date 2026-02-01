@@ -4,3 +4,5 @@
 
 --Ethan West
 --201990893
+
+SELECT StudentId, FirstName, LastName, EnrolmentYear FROM Student WHERE EnrolmentYear == 2022;
