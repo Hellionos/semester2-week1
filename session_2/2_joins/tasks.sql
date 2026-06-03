@@ -8,14 +8,15 @@
 -- 3. Exit SQLite: .exit
 
 --SELECT content FROM posts WHERE deleted==1;
---SELECT username FROM users WHERE username LIKE 'a%'; --(there are none)
+--SELECT username FROM users WHERE username LIKE 'a%'; --(there are none,although checked with b%)
 --SELECT content,username FROM users JOIN posts ON users.id=posts.user_id WHERE content LIKE '%small%';
 --SELECT content,username,posts.created_on FROM users JOIN posts ON users.id=posts.user_id WHERE deleted ==0 ORDER BY posts.created_on ASC;
 --SELECT username,COUNT(content) FROM users JOIN posts ON users.id=posts.user_id GROUP BY username;
 --SELECT username,COUNT(content) FROM users JOIN posts ON users.id=posts.user_id GROUP BY username HAVING COUNT(content) > 3;
 --SELECT username, COUNT(following_user_id) FROM users JOIN follows ON users.id=following_user_id GROUP BY username;
 --SELECT username, COUNT(followed_user_id) FROM users JOIN follows ON users.id=followed_user_id GROUP BY username ORDER BY COUNT(followed_user_id) DESC LIMIT 5;
-SELECT f1.username,f2.username FROM users AS f1,f2 JOIN follows AS fd,fg ON f1.id=fd.followed_user_id JOIN ON 
+SELECT follower.username,followed.username FROM follows JOIN users AS follower ON follows.following_user_id = follower.id
+JOIN users AS followed ON follows.followed_user_id = followed.id;
 
 --1. List all posts that have been deleted.
 --2. List all users whose usernames begin with 'a'.

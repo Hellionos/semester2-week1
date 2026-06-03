@@ -8,7 +8,7 @@
 -- 3. Exit SQLite: .exit
 
 --SELECT Continent,AVG(Population) FROM countries GROUP BY Continent;
---SELECT Continent,SUM(Population) FROM countries GROUP BY Continent;
+--SELECT Continent,SUM(Population) AS Total_Population FROM countries GROUP BY Continent;
 --SELECT Country FROM countries GROUP BY Continent HAVING MAX(Population);
 --SELECT Country FROM countries GROUP BY Continent HAVING MIN(AreaSqMi);
 --SELECT COUNT(Country),Continent FROM countries GROUP BY Continent;
@@ -21,6 +21,6 @@
 --SELECT AVG(GDPPerCapita),Continent FROM countries WHERE LiteracyPercent>80 GROUP BY Continent;
 --SELECT MAX(Birthrate),Continent FROM countries WHERE InfantMortalityPer1000<30 GROUP BY Continent;
 --SELECT Continent,AVG(GDPPerCapita) FROM countries WHERE LiteracyPercent>80 GROUP BY Continent HAVING AVG(GDPPerCapita)>10000 ORDER BY AVG(GDPPerCapita) DESC;
---SELECT Continent,SUM(Population) FROM countries WHERE Birthrate<20 GROUP BY Continent HAVING SUM(Population)>500000000 ORDER BY SUM(POPULATION) DESC LIMIT 3;
+--SELECT Continent,SUM(Population) FROM countries WHERE Birthrate<30 GROUP BY Continent HAVING SUM(Population)>500000000 ORDER BY SUM(POPULATION) DESC LIMIT 3;
 
 
